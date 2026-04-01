@@ -1,0 +1,134 @@
+:root {
+  --ifm-color-primary: #11335b;
+  --ifm-color-primary-dark: #0f2d4f;
+  --ifm-color-primary-darker: #0d2847;
+  --ifm-color-primary-light: #164172;
+  --ifm-color-primary-lighter: #1b4c84;
+  --ifm-background-color: #f5efe3;
+  --ifm-font-color-base: #1f1b16;
+  --ifm-heading-color: #10213c;
+  --ifm-code-font-size: 95%;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(212, 138, 40, 0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(17, 51, 91, 0.18), transparent 30%),
+    #f5efe3;
+}
+
+.heroWrap {
+  padding: 5rem 0 4rem;
+}
+
+.heroGrid {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: #835d1e;
+  margin-bottom: 0.75rem;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 7vw, 5.4rem);
+  line-height: 0.95;
+  margin: 0 0 1rem;
+}
+
+.heroText {
+  max-width: 42rem;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.heroAct {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.panel {
+  border: 1px solid rgba(16, 33, 60, 0.15);
+  border-radius: 28px;
+  padding: 1.5rem;
+  background: rgba(255, 251, 244, 0.72);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 50px rgba(17, 51, 91, 0.12);
+}
+
+.panelHead {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #835d1e;
+  margin-bottom: 1rem;
+}
+
+.panelList {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 2;
+}
+
+.cardSec {
+  padding: 0 0 4rem;
+}
+
+.cardGrid {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.cardLink {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.cardBox {
+  min-height: 220px;
+  padding: 1.4rem;
+  border-radius: 22px;
+  background: #fff9f0;
+  border: 1px solid rgba(16, 33, 60, 0.12);
+  box-shadow: 0 16px 40px rgba(17, 51, 91, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.cardBox:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 44px rgba(17, 51, 91, 0.14);
+}
+
+.cardBox h2 {
+  margin-bottom: 0.6rem;
+}
+
+.cardBox p {
+  min-height: 84px;
+  line-height: 1.7;
+}
+
+.cardBox span {
+  color: #835d1e;
+  font-weight: 700;
+}
+
+@media (max-width: 996px) {
+  .heroGrid,
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}
